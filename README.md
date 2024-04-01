@@ -44,4 +44,6 @@
 <hr />
 ✏️Reference <br />
  이미지 라벨링 및 모델링: https://jypark1111.tistory.com/64 <br />
- 파라미터 지정 및 모델링: https://youtu.be/vfQYRJ1x4Qg
+ 파라미터 지정 및 모델링: https://youtu.be/vfQYRJ1x4Qg <br />
+<br />
+ 💻TODO : confusion matrix(loss graph) 확인
