@@ -45,5 +45,25 @@
 ✏️Reference <br />
  이미지 라벨링 및 모델링: https://jypark1111.tistory.com/64 <br />
  파라미터 지정 및 모델링: https://youtu.be/vfQYRJ1x4Qg <br />
-<br />
- 💻TODO : confusion matrix(loss graph) 확인
+<hr />
+
+### 학습 평가 <br />
+
+1. mAP 결과 <br />
+> ![valid map050](https://github.com/gyuchangShim/yolo_nas_practice/assets/132640569/256152b5-1e45-4de2-bdd3-970a643a54f3) <br />
+> : epch가 5 ~ 15로 증가하면서 평균 정밀도가 감소하는 추세를 보였지만 최대 epoch 30까지 반복하면서 다시 증가하는 모습을 보인다.
+
+2. loss 결과 <br />
+> ![valid pploss](https://github.com/gyuchangShim/yolo_nas_practice/assets/132640569/98e2bbe0-95d0-4145-bbd1-767c7c47122f) <br />
+> : loss는 반복 횟수가 늘어가면서 점차 감소했지만 epoch 20부터 감소하는 추세가 점점 떨어지는 경향을 보인다.
+
+3. precision 결과 <br />
+> ![valid precision](https://github.com/gyuchangShim/yolo_nas_practice/assets/132640569/a7495dd2-4f85-40cc-bca2-7c5f42ec9c46) <br />
+> : 실제 정밀도(True로 분류한 것들 중 진짜 True인 경우)가 제일 높은 경우는 epoch 5이고 점차 감소하다가 epoch 15를 기점으로 다시 증가하는 경향을 보인다.
+
+4. recall 결과 <br />
+> ![valid recall](https://github.com/gyuchangShim/yolo_nas_practice/assets/132640569/6ce9b7dc-6739-4345-a208-718a2bc525af) <br />
+> 실제 재현율(True인 것들 중 True로 예측한 경우)이 최대 epoch 30으로 갈수록 점차 증가하는 경향을 보이지만 epoch 20 ~ 30까지 증가하는 추세가 점점 떨어지는 경향을 보인다.
+
+## 평가 정리
+> 전체 데이터 셋이 적어 정확한 판단이 불가능하지만 epoch를 늘릴 수록 loss가 줄고 정확도가 높아지는 모습을 얻을 수 있었고 loss 감소 추세가 떨어지고 precision, recall 등의 정확도가 증가하는 추세가 떨어지는 epoch 20에서 멈추는 것이 현재는 가장 좋은 선택이라고 생각한다. 
